@@ -87,7 +87,7 @@ let loadWindow() =
         |> Observable.filter is_left_click
         |> Observable.map (get_rectangle_position >> StartDrag)
 
-     /// Stream of StopDrag events
+    /// Stream of StopDrag events
     let stop_stream =
         window.Canvas.MouseUp
         |> Observable.filter is_left_click
